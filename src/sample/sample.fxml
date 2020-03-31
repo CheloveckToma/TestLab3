@@ -1,0 +1,194 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <tabs>
+        <Tab text="Линейный алгоритм">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefWidth="600.0">
+                            <children>
+                                <ImageView fx:id="linearImg" fitHeight="150.0" fitWidth="580.0" pickOnBounds="true" preserveRatio="true">
+                                    <VBox.margin>
+                                        <Insets bottom="30.0" top="10.0" />
+                                    </VBox.margin>
+                                </ImageView>
+                                <HBox alignment="CENTER">
+                                    <children>
+                                        <Label text="Введите значение X:">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets right="30.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="linerX" />
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER">
+                                    <children>
+                                        <Label text="Введите значение Y:">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets right="30.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="linerY" />
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <HBox alignment="CENTER">
+                                    <children>
+                                        <Label text="Введите значение Z:">
+                                            <font>
+                                                <Font size="18.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets right="30.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="linerZ" />
+                                    </children>
+                                </HBox>
+                                <Button fx:id="linearBtn" mnemonicParsing="false" text="Решить">
+                                    <VBox.margin>
+                                        <Insets top="50.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Button>
+                                <Label fx:id="linearAnswer">
+                                    <VBox.margin>
+                                        <Insets top="50.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font size="22.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </children></AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="Разветвляющийся алгоритм">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <VBox alignment="TOP_CENTER" prefWidth="600.0">
+                            <children>
+                                <ImageView fx:id="branchingImg" fitHeight="150.0" fitWidth="580.0" pickOnBounds="true" preserveRatio="true">
+                                    <VBox.margin>
+                                        <Insets bottom="30.0" top="10.0" />
+                                    </VBox.margin>
+                                </ImageView>
+                                <HBox alignment="CENTER" spacing="60.0">
+                                    <children>
+                                        <VBox alignment="CENTER" spacing="20.0">
+                                            <children>
+                                                <HBox alignment="CENTER">
+                                                    <children>
+                                                        <Label text="Введите значение X =">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                            <HBox.margin>
+                                                                <Insets right="5.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="branchingX" prefHeight="30.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER">
+                                                    <children>
+                                                        <Label text="Введите значение Y =">
+                                                            <font>
+                                                                <Font size="18.0" />
+                                                            </font>
+                                                            <HBox.margin>
+                                                                <Insets right="5.0" />
+                                                            </HBox.margin>
+                                                        </Label>
+                                                        <TextField fx:id="branchingY" prefHeight="30.0" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" spacing="12.0">
+                                            <children>
+                                                <Label alignment="CENTER" text="Выбор функции" textAlignment="CENTER">
+                                                    <font>
+                                                        <Font size="18.0" />
+                                                    </font>
+                                                </Label>
+                                                <RadioButton id="1" mnemonicParsing="false" selected="true" text="cos(x)">
+                                                    <font>
+                                                        <Font size="18.0" />
+                                                    </font>
+                                                    <toggleGroup>
+                                                        <ToggleGroup fx:id="radioGroup" />
+                                                    </toggleGroup>
+                                                </RadioButton>
+                                                <RadioButton id="2" mnemonicParsing="false" text="sqr(x)" toggleGroup="$radioGroup">
+                                                    <font>
+                                                        <Font size="18.0" />
+                                                    </font>
+                                                </RadioButton>
+                                                <RadioButton id="3" mnemonicParsing="false" text="exp(x)" toggleGroup="$radioGroup">
+                                                    <font>
+                                                        <Font size="18.0" />
+                                                    </font>
+                                                </RadioButton>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets left="10.0" right="10.0" />
+                                    </VBox.margin>
+                                </HBox>
+                                <Button fx:id="branchingBtn" mnemonicParsing="false" text="Решить">
+                                    <VBox.margin>
+                                        <Insets top="50.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font size="20.0" />
+                                    </font>
+                                </Button>
+                                <Label fx:id="branchingAnswer">
+                                    <VBox.margin>
+                                        <Insets top="50.0" />
+                                    </VBox.margin>
+                                    <font>
+                                        <Font size="22.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </children></AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>
